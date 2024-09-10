@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Time</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('loop.gif'); 
+            background-size:cover;
+            color: #fff; 
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .link-list a {
+            color: #00bfff; 
+        }
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">Story Reader &lt;3</h1>
+        <form method="GET" class="mb-4">
+            <div class="form-group">
+                <input type="text" id="file" name="file" value="story.txt" class="form-control" placeholder="Enter file name">
+            </div>
+        </form>
+        <div class="link-list">
+            <a href="/?file=password.txt">password.txt</a><br>
+            <a href="/?file=homework.txt">homework.txt</a><br>
+            <a href="/?file=Kembali Ke Pulau Berk 1.txt">Kembali Ke Pulau Berk 1.txt</a><br>
+            <a href="/?file=Kembali Ke Pulau Berk 2.txt">Kembali Ke Pulau Berk 2.txt</a><br>
+            <a href="/?file=Kembali Ke Pulau Berk 3.txt">Kembali Ke Pulau Berk 3.txt</a><br>
+            <a href="/?file=Lorem Ipsum.txt">Lorem Ipsum.txt</a>
+        </div>
+        <p class="mt-4">{{ file | safe }}</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
